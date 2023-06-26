@@ -178,6 +178,18 @@ type MetaDataObject struct {
 	CountryOrRegion                    string                                      `json:"countryOrRegion,omitempty"`
 	SearchTermText                     *string                                     `json:"SearchTermText,omitempty"`
 	SearchTermSource                   *SearchTermSource                           `json:"searchTermSource,omitempty"`
+
+	// adgroup
+	AdGroupId                  int         `json:"adGroupId"`
+	StartTime                  string      `json:"startTime"`
+	EndTime                    string      `json:"endTime"`
+	CpaGoal                    interface{} `json:"cpaGoal"`
+	AdGroupStatus              string      `json:"adGroupStatus"`
+	AdGroupServingStatus       string      `json:"adGroupServingStatus"`
+	AdGroupServingStateReasons interface{} `json:"adGroupServingStateReasons"`
+	AdGroupDisplayStatus       string      `json:"adGroupDisplayStatus"`
+	OrgId                      int         `json:"orgId"`
+	PricingModel               string      `json:"pricingModel"`
 }
 
 // GrandTotalsRow is the summary of cumulative metrics

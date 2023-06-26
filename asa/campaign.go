@@ -138,6 +138,8 @@ const (
 	CampaignSupplySourceNews CampaignSupplySource = "NEWS"
 	// CampaignSupplySourceStocks is for a campaign supply source on STOCKS.
 	CampaignSupplySourceStocks CampaignSupplySource = "STOCKS"
+	//CampaignSupplySourceAppStoreSearchTab The campaign runs on the App Store Search tab.
+	CampaignSupplySourceAppStoreSearchTab CampaignSupplySource = "APPSTORE_SEARCH_TAB"
 )
 
 // CampaignServingStatus is the status of the campaign.
@@ -163,7 +165,7 @@ const (
 // CampaignCountryOrRegionServingStateReasons is the reasons why a campaign can’t run
 //
 // https://developer.apple.com/documentation/apple_search_ads/campaign/countryorregionservingstatereasons
-type CampaignCountryOrRegionServingStateReasons map[string]CampaignCountryOrRegionServingStateReason
+type CampaignCountryOrRegionServingStateReasons map[string][]CampaignCountryOrRegionServingStateReason
 
 // CampaignCountryOrRegionServingStateReason is a reason that returns when a campaign can’t run for a specified country or region.
 type CampaignCountryOrRegionServingStateReason string
