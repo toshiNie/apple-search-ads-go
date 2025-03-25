@@ -36,7 +36,7 @@ import (
 )
 
 const (
-	defaultBaseURL  = "https://api.searchads.apple.com/api/v4/"
+	defaultBaseURL  = "https://api.searchads.apple.com/api/v5/"
 	defaultAuthURL  = "https://appleid.apple.com/auth/oauth2/token"
 	userAgent       = "apple-search-ads-go"
 	defaultTimeout  = 30 * time.Second
