@@ -118,12 +118,12 @@ type Money struct {
 // https://developer.apple.com/documentation/apple_search_ads/adgroup
 type AdGroup struct {
 	AutomatedKeywordsOptIn bool                 `json:"automatedKeywordsOptIn,omitempty"`
-	CampaignID             int64                `json:"campaignID,omitempty"`
+	CampaignID             int64                `json:"campaignId,omitempty"`
 	CpaGoal                *Money               `json:"cpaGoal,omitempty"`
 	DefaultBidAmount       *Money               `json:"defaultBidAmount"`
 	Deleted                bool                 `json:"deleted"`
 	DisplayStatus          AdGroupDisplayStatus `json:"displayStatus"`
-	EndTime                DateTime             `json:"endTime,omitempty"`
+	EndTime                *DateTime            `json:"endTime,omitempty"`
 	ID                     int64                `json:"id,omitempty"`
 	ModificationTime       DateTime             `json:"modificationTime,omitempty"`
 	Name                   string               `json:"name,omitempty"`
@@ -133,7 +133,8 @@ type AdGroup struct {
 	ServingStatus          AdGroupServingStatus `json:"servingStatus"`
 	StartTime              DateTime             `json:"startTime,omitempty"`
 	Status                 AdGroupStatus        `json:"status,omitempty"`
-	TargetDimensions       *TargetDimensions    `json:"targetDimensions,omitempty"`
+	TargetDimensions       *TargetDimensions    `json:"targetingDimensions,omitempty"`
+	CreationTime           string               `json:"creationTime"`
 }
 
 // TargetDimensions is the criteria to use with ad groups to narrow the audience that views the ads
@@ -148,6 +149,7 @@ type TargetDimensions struct {
 	DeviceClass    *DeviceClassCriteria   `json:"deviceClass,omitempty"`
 	Gender         *GenderCriteria        `json:"gender,omitempty"`
 	Locality       *LocalityCriteria      `json:"locality,omitempty"`
+	AppCategories  interface{}            `json:"appCategories"`
 }
 
 // AdminAreaCriteria is the defined targeted audience by administrative area
